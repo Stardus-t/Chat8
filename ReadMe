@@ -1,4 +1,4 @@
-#Chat8
+# Chat8
 一个基于 C++ 和 Qt 开发的聊天系统，包含服务器端（ChatServer、ChatServer2、StatusServer、GateServer 等）和客户端（Client），支持用户登录、聊天消息发送与接收、好友添加、聊天记录存储等功能。
 
 
