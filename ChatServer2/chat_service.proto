@@ -1,0 +1,27 @@
+syntax="proto3";
+package chat;
+
+message TextChatMsgReq{
+    int32 from_id=1;
+    int32 to_id=2;
+    string content=3;
+}
+
+message TextChatMsgRsp{
+    int32 error=1;
+}
+
+message GetChatServerReq{
+    int32 uid=1;
+}
+
+message GetChatServerRsp{
+    string host=1;
+    int32 port=2;
+    int32 error=3;
+    string token=4;
+}
+
+service ChatService{
+    rpc TextChatMsg(TextChatMsgReq) returns (TextChatMsgRsp);
+}

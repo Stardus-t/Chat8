@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+package message;
+
+service VarifyService {
+  rpc GetVarifyCode (GetVarifyReq) returns (GetVarifyRsp) {}
+}
+
+message GetVarifyReq {
+  string email = 1;
+}
+
+message GetVarifyRsp {
+  int32 error = 1;
+  string email = 2;
+  string code = 3;
+}
+
+message GetChatServerReq {
+  int32 uid = 1;
+}
+
+message GetChatServerRsp {
+  int32 error = 1;
+  string host = 2;
+  string port = 3;
+  string token = 4;
+}
+
+message UserServerReq{
+  string target_uid=1;
+}
+
+message UserServerRsp{
+  int32 error=1;
+  string server_id=2;
+  string host=3;
+  string port=4;
+}
+
+message UserUidReq{
+  bool is_chat=1;
+  string sender_uid=2;
+  string user_name=3;
+}
+
+message UserUidRsp{
+  int32 error=1;
+  string target_uid=2;
+}
+
+service StatusService {
+	rpc GetChatServer (GetChatServerReq) returns (GetChatServerRsp) {}
+  rpc GetUserServer (UserServerReq) returns(UserServerRsp);
+  rpc GetUserUid (UserUidReq) returns(UserUidRsp);
+}
+
+service GateService {
+	rpc GetChatServer (GetChatServerReq) returns (GetChatServerRsp) {}
+  rpc GetUserServer (UserServerReq) returns(UserServerRsp);
+  rpc GetUseruid (UserUidReq) returns(UserUidRsp);
+}

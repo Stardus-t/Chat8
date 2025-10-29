@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginDialog</class>
+ <widget class="QWidget" name="LoginDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>300</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <widget class="QLabel" name="qrlabel">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>70</y>
+        <width>151</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="rc.qrc">:/res/Login/icon.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="password_forgetlabel">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>340</y>
+        <width>51</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>忘记密码</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RegisterBtn">
+      <property name="geometry">
+       <rect>
+        <x>148</x>
+        <y>370</y>
+        <width>112</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>注册</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="passwordlineEdit">
+      <property name="geometry">
+       <rect>
+        <x>44</x>
+        <y>300</y>
+        <width>236</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="user_namelabel">
+      <property name="geometry">
+       <rect>
+        <x>13</x>
+        <y>272</y>
+        <width>27</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>邮箱：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="userlineEdit">
+      <property name="geometry">
+       <rect>
+        <x>44</x>
+        <y>272</y>
+        <width>236</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="LoginBtn">
+      <property name="geometry">
+       <rect>
+        <x>31</x>
+        <y>370</y>
+        <width>113</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>登录</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="passwordlabel">
+      <property name="geometry">
+       <rect>
+        <x>13</x>
+        <y>300</y>
+        <width>27</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>密码：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="error_msg">
+      <property name="geometry">
+       <rect>
+        <x>69</x>
+        <y>240</y>
+        <width>161</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="rc.qrc"/>
+ </resources>
+ <connections/>
+</ui>
