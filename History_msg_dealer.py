@@ -11,7 +11,7 @@ if len(sys.argv) < 2:
     sys.exit(1)
 temp_file_path = sys.argv[1]
 
-# 读取temped.txt中的内容（替换原有的sys.stdin.read()）
+# 读取temped.txt中的内容
 try:
     with open(temp_file_path, 'r', encoding='gbk') as f:
         history_msg = f.read()  # 从文件读取内容
@@ -29,7 +29,7 @@ response = Generation.call(
     model="qwen-turbo",
     messages=messages,
     result_format="message",
-    # 开启深度思考
+    # 深度思考
     enable_thinking=False,
 )
 
@@ -37,9 +37,6 @@ if response.status_code == 200:
     # # 打印思考过程
     # print("=" * 20 + "思考过程" + "=" * 20)
     # print(response.output.choices[0].message.reasoning_content)
-
-    # 打印回复
-    # print("=" * 20 + "完整回复" + "=" * 20)
     print(response.output.choices[0].message.content)
 else:
     print(f"HTTP返回码：{response.status_code}")
